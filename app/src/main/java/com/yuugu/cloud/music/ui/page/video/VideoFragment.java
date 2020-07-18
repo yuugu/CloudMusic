@@ -43,6 +43,12 @@ public class VideoFragment extends BaseFragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        Log.d(TAG, "onViewCreated: ====LifeActivity");
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
         Log.d(TAG, "onStart: ====LifeActivity");
@@ -70,5 +76,11 @@ public class VideoFragment extends BaseFragment {
     public void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "onDestroy: ====LifeActivity");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView: ====LifeActivity");
     }
 }

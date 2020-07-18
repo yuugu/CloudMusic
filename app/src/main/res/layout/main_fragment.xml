@@ -24,31 +24,31 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_alignParentLeft="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_alignParentStart="true"
                 android:padding="12dp"
                 android:src="@mipmap/list" />
 
             <com.google.android.material.tabs.TabLayout
-                app:tabRippleColor="@android:color/white"
-                app:tabMaxWidth="200dp"
-                app:tabMinWidth="5dp"
-                app:tabPaddingStart="5dp"
-                app:tabPaddingEnd="5dp"
-                android:layout_centerHorizontal="true"
                 android:id="@+id/tableLayout"
                 initTabAndPage="@{vm.initTabAndPage}"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                app:tabIndicator="@null">
+                android:layout_centerHorizontal="true"
+                app:tabIndicator="@null"
+                app:tabMaxWidth="200dp"
+                app:tabMinWidth="5dp"
+                app:tabPaddingEnd="5dp"
+                app:tabPaddingStart="5dp"
+                app:tabUnboundedRipple="true">
 
             </com.google.android.material.tabs.TabLayout>
 
             <ImageView
-                android:layout_alignParentRight="true"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
                 android:padding="12dp"
                 android:src="@mipmap/search" />
 

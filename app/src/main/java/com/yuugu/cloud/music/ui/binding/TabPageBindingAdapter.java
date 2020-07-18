@@ -48,6 +48,7 @@ public class TabPageBindingAdapter {
             viewPager.setAdapter(new ViewPagerAdapter(((AppCompatActivity) tabLayout.getContext()).getSupportFragmentManager(), list));
             tabLayout.setupWithViewPager(viewPager);
             viewPager.setCurrentItem(1);
+            viewPager.setOffscreenPageLimit(title.length);
         }
 
         for (int i = 0; i < title.length; i++) {

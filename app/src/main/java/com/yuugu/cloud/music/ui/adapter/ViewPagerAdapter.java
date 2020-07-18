@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.yuugu.cloud.scaffold.page.BaseFragment;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 /**
@@ -21,6 +23,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         this.list = list;
     }
 
+    @NotNull
     @Override
     public Fragment getItem(int position) {
         return list.get(position);
