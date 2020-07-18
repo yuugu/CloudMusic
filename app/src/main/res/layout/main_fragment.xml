@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.yuugu.cloud.music.ui.page.main.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_alignParentLeft="true"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@mipmap/list" />
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabRippleColor="@android:color/white"
+                app:tabMaxWidth="200dp"
+                app:tabMinWidth="5dp"
+                app:tabPaddingStart="5dp"
+                app:tabPaddingEnd="5dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tableLayout"
+                initTabAndPage="@{vm.initTabAndPage}"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                app:tabIndicator="@null">
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@mipmap/search" />
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_title">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
