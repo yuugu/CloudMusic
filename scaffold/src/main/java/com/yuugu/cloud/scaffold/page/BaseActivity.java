@@ -23,6 +23,8 @@ public abstract class BaseActivity extends BaseVMActivity {
         //状态栏沉浸
         BarUtils.setStatusBarColor(this, Color.TRANSPARENT);
         BarUtils.setStatusBarLightMode(this, true);
+        //隐藏底部导航栏
+        BarUtils.setNavBarVisibility(this, false);
 
         //网络监听
         getLifecycle().addObserver(NetworkStateManager.getInstance());
