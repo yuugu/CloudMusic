@@ -15,8 +15,8 @@ class RetrofitFactory private constructor() {
 
     init {
         val gson = Gson().newBuilder()
-//                .setLenient()
-//                .serializeNulls()
+                .setLenient()
+                .serializeNulls()
                 .create()
 
         retrofit = Retrofit.Builder()
