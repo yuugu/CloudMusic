@@ -31,7 +31,7 @@ public class BannerEntity {
         return banners;
     }
 
-    public class BannersEntity {
+    public static class BannersEntity {
         /**
          * adLocation : null
          * monitorImpress : null
@@ -422,7 +422,7 @@ public class BannerEntity {
             private int st;
             private String a;
             private String cd;
-            private int publishTime;
+            private long publishTime;
             private String cf;
             private int originCoverType;
             private HEntity h;
@@ -511,7 +511,7 @@ public class BannerEntity {
                 this.cd = cd;
             }
 
-            public void setPublishTime(int publishTime) {
+            public void setPublishTime(long publishTime) {
                 this.publishTime = publishTime;
             }
 
@@ -659,7 +659,7 @@ public class BannerEntity {
                 return cd;
             }
 
-            public int getPublishTime() {
+            public long getPublishTime() {
                 return publishTime;
             }
 

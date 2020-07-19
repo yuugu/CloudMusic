@@ -1,3 +1,4 @@
+include ':network'
 include ':scaffold'
 include ':app'
 rootProject.name = "CloudMusic"
