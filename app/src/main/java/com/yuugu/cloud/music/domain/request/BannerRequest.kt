@@ -5,10 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.yuugu.cloud.music.data.api.ApiService
 import com.yuugu.cloud.music.data.bean.BannerEntity
 import com.yuugu.cloud.music.data.repository.DataRepository
-import com.yuugu.network.RetrofitFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -30,7 +28,7 @@ class BannerRequest(private var model: ViewModel) {
         model.viewModelScope.launch {
             try {
                 val data = withContext(Dispatchers.IO) {
-                    DataRepository.instance.getBanner()
+                    DataRepository.instance.getBanner(bannerLiveData)
                 }
                 bannerLiveData.value = data
             } catch (e: Exception) {
